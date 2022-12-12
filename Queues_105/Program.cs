@@ -19,6 +19,14 @@ namespace Queues_105
             FRONT = -1;
             REAR = -1;
         }
+        public void insert(int element)
+        {
+            /*This statement checks for the overflow condition. */
+            if ((FRONT == 0 && REAR == max - 1 ) ||(FRONT == REAR +1))
+            {
+
+            }
+        }
 
         
         static void Main(string[] args)
