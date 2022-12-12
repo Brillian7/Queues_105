@@ -34,9 +34,21 @@ namespace Queues_105
             {
                 FRONT = 0;
                 REAR = 0;
-                
-            }
 
+            }
+            else
+            {
+
+                /* If REAR is at the last position of the array, then the value of 
+                 * REAR is set to 0 that corresponds to the first position of the array. */
+                if (REAR == max - 1)
+                    REAR = 0;
+                else
+                    /* if REAR is not at the last position, then its value is incremented by one */
+                    REAR = REAR + 1;
+            }
+            /* Once the position of REAR is determined, the element is added at its proper place. */
+            queue_array[REAR] = element;
         }
 
         
