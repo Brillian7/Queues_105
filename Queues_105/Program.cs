@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -121,6 +123,59 @@ namespace Queues_105
         
         static void Main(string[] args)
         {
+            Program queue = new Program();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("1. Implement insert operation");
+                    Console.WriteLine("2. Implement delete Operation");
+                    Console.WriteLine("3. Display Values");
+                    Console.WriteLine("4. Exit");
+                    Console.Write("\nEnter your choice (1-4): ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.WriteLine("Enter a number: ");
+                                int num = Convert.ToInt32(System.Console.ReadLine());
+                                Console.WriteLine();
+                                queue.insert(num);
+                            }
+                            break;
+                        case '2':
+                            {
+                                queue.remove();
+                            }
+                            break;
+                        case '3':
+                            {
+                                queue.display();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid Option !! ");
+                            }
+                            break;
+
+                        
+                    }
+                    
+
+                    
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("check for the values entered.");
+                }
+            }
         }
     }
 }
