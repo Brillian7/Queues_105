@@ -58,7 +58,18 @@ namespace Queues_105
                 Console.WriteLine("Queue underflow\n");
                 return ;
             }
-            
+            Console.WriteLine("\nThe element deleted from the queue is: " + queue_array[FRONT]
+                + "\n");
+            /* Check if the queue has one element. */
+            if (FRONT == REAR)
+            {
+                FRONT = -1;
+                REAR = -1;
+            }
+            else
+            {
+
+            }
         }
 
         
