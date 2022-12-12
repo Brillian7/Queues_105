@@ -24,8 +24,19 @@ namespace Queues_105
             /*This statement checks for the overflow condition. */
             if ((FRONT == 0 && REAR == max - 1 ) ||(FRONT == REAR +1))
             {
-
+                Console.WriteLine("\nQueue overflow\n");
+                return;
             }
+            /* This following statement checks whether the queue is empty if the queue
+             * , then the value of the REAR and FRONT variables is set to 0 */
+            if (FRONT == -1)
+
+            {
+                FRONT = 0;
+                REAR = 0;
+                
+            }
+
         }
 
         
