@@ -87,6 +87,11 @@ namespace Queues_105
                 Console.WriteLine("Queue is empty\n");
                 return;
             }
+            Console.WriteLine("\nElements in the queue are.............................................\n");
+            if (FRONT_position <=REAR_position)
+            {
+
+            }
         }
 
         
