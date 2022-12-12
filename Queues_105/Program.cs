@@ -68,7 +68,24 @@ namespace Queues_105
             }
             else
             {
+                /* if the element to be deleted is at the last position of the array, then the value
+                 * of FRONT is set to 0 i.e to the first elment of the array*/
+                if(FRONT == max -1)
+                    FRONT = 0;
+                else /* FRONT is incremented by one if it is not the first element of array. */
+                    FRONT = FRONT + 1;
+            }
+        }
 
+        public void display()
+        {
+            int FRONT_position = FRONT;
+            int REAR_position = REAR;
+            /* Checks if the queue is empty. */
+            if (FRONT == -1)
+            {
+                Console.WriteLine("Queue is empty\n");
+                return;
             }
         }
 
